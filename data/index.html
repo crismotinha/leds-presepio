@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   </head>
+   <body>
+       <style>
+           .base {
+                margin: 25px;
+                background-color: rgba(245, 245, 245, 0.4);
+           }
+           .btn-outline-success {
+                background-color: rgba(245, 245, 245, 0.95);
+           }
+           .card-title, .card-header, .card-subtitle {
+            color: white;
+            text-shadow: 0 0 2px #000;
+            font-weight: bold;
+           }
+           body {
+            width: 100%;
+            height: 100%;
+               background-image: url("https://png.pngtree.com/background/20210715/original/pngtree-merry-christmas-wood-plank-texture-background-picture-image_1266178.jpg");
+           }
+       </style>
+       <div class="card base">
+           <h2 id='title' class="card-header text-center" >Presépio Inteligente</h2>
+           <h6 class="card-subtitle text-center">Família Motinha-Milhono</h6>
+           
+       <div class="card-body container">
+        
+           <form method='post' name='led_info'>
+            <div class="mb-3 row">
+                <h4 class="card-title">Grupo de LEDs 1</h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="led1" id="led1off" autocomplete="off" value='off' checked>
+                    <label class="btn btn-outline-success" for="led1off">Desligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led1" id="led1on" autocomplete="off" value='on'>
+                    <label class="btn btn-outline-success" for="led1on">Ligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led1" id="led1blink" autocomplete="off" value='blink'>
+                    <label class="btn btn-outline-success" for="led1blink">Piscando</label>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon1">Intervalo (ms)</span>
+                    <input type="number" class="form-control" id='led1FadeInterval' name='led1FadeInterval' value='25'>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <h4 class="card-title">Grupo de LEDs 2</h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="led2" id="led2off" autocomplete="off" value='off' checked>
+                    <label class="btn btn-outline-success" for="led2off">Desligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led2" id="led2on" autocomplete="off" value='on'>
+                    <label class="btn btn-outline-success" for="led2on">Ligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led2" id="led2blink" autocomplete="off" value='blink'>
+                    <label class="btn btn-outline-success" for="led2blink">Piscando</label>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon2">Intervalo (ms)</span>
+                    <input type="number" class="form-control" id='led2FadeInterval' name='led2FadeInterval' value='25'>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <h4 class="card-title">Grupo de LEDs 3</h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="led3" id="led3off" autocomplete="off" value='off' checked>
+                    <label class="btn btn-outline-success" for="led3off">Desligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led3" id="led3on" autocomplete="off" value='on'>
+                    <label class="btn btn-outline-success" for="led3on">Ligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led3" id="led3blink" autocomplete="off" value='blink'>
+                    <label class="btn btn-outline-success" for="led3blink">Piscando</label>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon3">Intervalo (ms)</span>
+                    <input type="number" class="form-control" id='led3FadeInterval' name='led3FadeInterval' value='25'>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <h4 class="card-title">Grupo de LEDs 4</h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="led4" id="led4off" autocomplete="off" value='off' checked>
+                    <label class="btn btn-outline-success" for="led4off">Desligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led4" id="led4on" autocomplete="off" value='on'>
+                    <label class="btn btn-outline-success" for="led4on">Ligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led4" id="led4blink" autocomplete="off" value='blink'>
+                    <label class="btn btn-outline-success" for="led4blink">Piscando</label>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon4">Intervalo (ms)</span>
+                    <input type="number" class="form-control" id='led4FadeInterval' name='led4FadeInterval' value='25'>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <h4 class="card-title">LED da Manjedoura</h4>
+                <div class="btn-group" role="group">
+                    <input type="radio" class="btn-check" name="led5" id="led5off" autocomplete="off" value='off' checked>
+                    <label class="btn btn-outline-success" for="led5off">Desligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led5" id="led5on" autocomplete="off" value='on'>
+                    <label class="btn btn-outline-success" for="led5on">Ligados</label>
+                  
+                    <input type="radio" class="btn-check" name="led5" id="led5blink" autocomplete="off" value='blink'>
+                    <label class="btn btn-outline-success" for="led5blink">Piscando</label>
+                  </div>
+                
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="basic-addon5">Intervalo (ms)</span>
+                    <input type="number" class="form-control" id='led5FadeInterval' name='led5FadeInterval' value='25'>
+                </div>
+            </div>
+               
+            <div class="input-group mb-3" style="width: 100%;">
+                <button type='submit' class="btn btn-danger btn-lg" style="width: 100%;">Aplicar</button>                
+            </div>
+                
+            </form>
+        </div>
+           
+       </div>
+       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+       <script>           
+           const formElem = document.querySelector('form');
+           formElem.addEventListener('submit', (e) => {
+            // on form submission, prevent default
+            e.preventDefault();
+
+            // construct a FormData object, which fires the formdata event
+            new FormData(formElem);
+            });
+
+            formElem.addEventListener('formdata', (e) => {
+                console.log('formdata fired');
+
+                // Get the form data from the event object
+                let data = e.formData;
+                var output = {};
+                console.log(data)
+                for (const entry of data) {
+                    output[entry[0]]= entry[1]
+                    console.log(output)
+                };
+
+                // submit the data via XHR
+                let request = new XMLHttpRequest();
+                var url = 'http://192.168.1.184/changeledstate';
+                request.open('POST', url);
+
+                request.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
+                console.log(JSON.stringify(output));
+                
+                console.log(url)
+                request.send(JSON.stringify(output));
+            });
+       </script>
+   </body>
+</html>
